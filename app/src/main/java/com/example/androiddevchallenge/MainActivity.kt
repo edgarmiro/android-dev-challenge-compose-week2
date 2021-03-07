@@ -139,7 +139,8 @@ fun MyApp() {
                     modifier = Modifier
                         .align(Alignment.BottomStart)
                         .size(40.dp),
-                    onClick = { stopCounter() }) {
+                    onClick = { stopCounter() }
+                ) {
                     Icon(
                         imageVector = Icons.Filled.Stop,
                         contentDescription = "Stop"
@@ -160,7 +161,8 @@ fun MyApp() {
                                 State.RUNNING -> State.PAUSED
                                 State.STOPPED, State.PAUSED -> State.RUNNING
                             }
-                        })
+                        }
+                    )
                 }
             }
         }
@@ -188,7 +190,8 @@ private fun CountdownSelector(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp), horizontalArrangement = Arrangement.SpaceEvenly
+                .padding(top = 16.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             InputButton("1", onClick = { onChangeText("1") })
             InputButton("2", onClick = { onChangeText("2") })
@@ -197,7 +200,8 @@ private fun CountdownSelector(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp), horizontalArrangement = Arrangement.SpaceEvenly
+                .padding(top = 16.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             InputButton("4", onClick = { onChangeText("4") })
             InputButton("5", onClick = { onChangeText("5") })
@@ -206,7 +210,8 @@ private fun CountdownSelector(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp), horizontalArrangement = Arrangement.SpaceEvenly
+                .padding(top = 16.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             InputButton("7", onClick = { onChangeText("7") })
             InputButton("8", onClick = { onChangeText("8") })
@@ -216,7 +221,8 @@ private fun CountdownSelector(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 16.dp), horizontalArrangement = Arrangement.SpaceEvenly
+                .padding(top = 16.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             FloatingActionButton(onClick = onRemove) {
                 Icon(imageVector = Icons.Filled.Backspace, contentDescription = "Backspace")
